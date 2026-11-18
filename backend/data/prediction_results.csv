@@ -1,3 +1,4 @@
+
 person_id,age,gender,nationality,first_generation,disability_status,family_income_level,scholarship_holder,tuition_up_to_date,part_time_job,weekly_work_hours,course_type,study_mode,semester,international_student,admission_grade,previous_qualification_grade,units_enrolled,units_passed,units_failed,gpa_semester_1,gpa_semester_2,attendance_rate,assignments_submitted_rate,library_visits_per_month,lms_logins_per_week,extracurricular_activities,missed_deadlines,stress_level,mental_health_support,satisfaction_score,commute_time_mins,sleep_hours,dropout,predicted_gpa,predicted_dropout,dropout_probability,dropout_status
 1,23,Male,Brazil,0,0,Low,1,0,1,24,STEM,Online,7,0,164.6,165.1,11,11,0,3.44,2.55,77.3,75.0,4,16.3,0,3,8,0,6,37,5.7,0,2.64,0,0.0373,Tidak Berisiko
 2,18,Other,USA,1,1,High,1,1,0,0,Arts & Humanities,Full-time,6,1,175.2,164.1,14,11,3,2.56,2.53,52.1,80.1,3,8.4,1,1,7,0,6,15,5.4,1,2.0,0,0.1993,Tidak Berisiko

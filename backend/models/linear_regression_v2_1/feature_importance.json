@@ -1,0 +1,142 @@
+[
+  {
+    "feature": "numeric__gpa_semester_1",
+    "coefficient": 0.5938332170273377,
+    "model_coefficient": 0.5938332170273443,
+    "direction": "naik",
+    "absolute_coefficient": 0.5938332170273377
+  },
+  {
+    "feature": "numeric__previous_qualification_grade",
+    "coefficient": 0.008156610441141679,
+    "model_coefficient": 0.008156610441141623,
+    "direction": "naik",
+    "absolute_coefficient": 0.008156610441141679
+  },
+  {
+    "feature": "numeric__weekly_work_hours",
+    "coefficient": -0.00778011744708838,
+    "model_coefficient": -0.007780117447089507,
+    "direction": "turun",
+    "absolute_coefficient": 0.00778011744708838
+  },
+  {
+    "feature": "numeric__admission_grade",
+    "coefficient": 0.005191798929828548,
+    "model_coefficient": 0.005191798929828528,
+    "direction": "naik",
+    "absolute_coefficient": 0.005191798929828548
+  },
+  {
+    "feature": "numeric__assignments_submitted_rate",
+    "coefficient": 0.0020545385249172697,
+    "model_coefficient": 0.0020545385249171287,
+    "direction": "naik",
+    "absolute_coefficient": 0.0020545385249172697
+  },
+  {
+    "feature": "numeric__attendance_rate",
+    "coefficient": 0.0020080313526933684,
+    "model_coefficient": 0.002008031352693356,
+    "direction": "naik",
+    "absolute_coefficient": 0.0020080313526933684
+  },
+  {
+    "feature": "categorical__course_type_Arts & Humanities",
+    "coefficient": 0.0017533069934128277,
+    "model_coefficient": 0.004560653820601789,
+    "direction": "naik",
+    "absolute_coefficient": 0.0017533069934128277
+  },
+  {
+    "feature": "numeric__lms_logins_per_week",
+    "coefficient": -0.0016771775823168952,
+    "model_coefficient": -0.0016771775823168642,
+    "direction": "turun",
+    "absolute_coefficient": 0.0016771775823168952
+  },
+  {
+    "feature": "categorical__course_type_Health Sciences",
+    "coefficient": -0.0016024912239523293,
+    "model_coefficient": -0.004495289562054172,
+    "direction": "turun",
+    "absolute_coefficient": 0.0016024912239523293
+  },
+  {
+    "feature": "categorical__study_mode_Online",
+    "coefficient": 0.0011852293300679316,
+    "model_coefficient": 0.0035361624036974178,
+    "direction": "naik",
+    "absolute_coefficient": 0.0011852293300679316
+  },
+  {
+    "feature": "numeric__sleep_hours",
+    "coefficient": 0.001092087656662122,
+    "model_coefficient": 0.0010920876566620132,
+    "direction": "naik",
+    "absolute_coefficient": 0.001092087656662122
+  },
+  {
+    "feature": "numeric__library_visits_per_month",
+    "coefficient": -0.0009677793238077322,
+    "model_coefficient": -0.0009677793238080631,
+    "direction": "turun",
+    "absolute_coefficient": 0.0009677793238077322
+  },
+  {
+    "feature": "numeric__missed_deadlines",
+    "coefficient": 0.000967256425257846,
+    "model_coefficient": 0.0009672564252576885,
+    "direction": "naik",
+    "absolute_coefficient": 0.000967256425257846
+  },
+  {
+    "feature": "categorical__study_mode_Part-time",
+    "coefficient": -0.0007892474770421999,
+    "model_coefficient": -0.0019077568650645786,
+    "direction": "turun",
+    "absolute_coefficient": 0.0007892474770421999
+  },
+  {
+    "feature": "categorical__study_mode_Full-time",
+    "coefficient": -0.0007757598469230084,
+    "model_coefficient": -0.0016284055386328647,
+    "direction": "turun",
+    "absolute_coefficient": 0.0007757598469230084
+  },
+  {
+    "feature": "numeric__age",
+    "coefficient": 0.00035496806145669324,
+    "model_coefficient": 0.00035496806145672604,
+    "direction": "naik",
+    "absolute_coefficient": 0.00035496806145669324
+  },
+  {
+    "feature": "categorical__course_type_STEM",
+    "coefficient": -0.00032395127237754554,
+    "model_coefficient": -0.0007055758510464269,
+    "direction": "turun",
+    "absolute_coefficient": 0.00032395127237754554
+  },
+  {
+    "feature": "numeric__commute_time_mins",
+    "coefficient": 0.00018788155549261573,
+    "model_coefficient": 0.00018788155549261551,
+    "direction": "naik",
+    "absolute_coefficient": 0.00018788155549261573
+  },
+  {
+    "feature": "categorical__course_type_Business",
+    "coefficient": 0.00018101239724948502,
+    "model_coefficient": 0.0004182272232482424,
+    "direction": "naik",
+    "absolute_coefficient": 0.00018101239724948502
+  },
+  {
+    "feature": "categorical__course_type_Law & Social Sciences",
+    "coefficient": 7.178061558779808e-05,
+    "model_coefficient": 0.00022198436925048102,
+    "direction": "naik",
+    "absolute_coefficient": 7.178061558779808e-05
+  }
+]

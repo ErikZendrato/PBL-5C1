@@ -8,44 +8,51 @@ BASE_DIR = Path(__file__).resolve().parents[2]
 load_dotenv(BASE_DIR / ".env")
 
 SUPABASE_URL = os.getenv("SUPABASE_URL")
-SUPABASE_SECRET_KEY = os.getenv("SUPABASE_SECRET_KEY")
+SUPABASE_SECRET_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY") or os.getenv("SUPABASE_SECRET_KEY")
 
-if not SUPABASE_URL or not SUPABASE_SECRET_KEY:
-    raise ValueError("Konfigurasi Supabase belum lengkap.")
+supabase: Client | None = None
+if SUPABASE_URL and SUPABASE_SECRET_KEY:
+    supabase = create_client(SUPABASE_URL, SUPABASE_SECRET_KEY)
 
-supabase: Client = create_client(
-    SUPABASE_URL,
-    SUPABASE_SECRET_KEY
-)
+
+def get_supabase() -> Client:
+    if supabase is None:
+        raise RuntimeError("Konfigurasi Supabase belum lengkap.")
+    return supabase
+
+
+def get_user_role(user_id: str) -> str | None:
+    response = get_supabase().table("profiles").select("role").eq("id", user_id).maybe_single().execute()
+    return response.data.get("role") if response.data else None
 
 
 def save_prediction(
-    prediction_type: str,
+    student_id: str,
+    semester_target: int,
+    hasil: str,
+    nilai_prediksi: float,
+    batas_bawah: float,
+    batas_atas: float,
+    faktor: list[dict],
+    model_version: str,
     input_features: dict,
-    predicted_value: float = None,
-    predicted_class: int = None,
-    dropout_probability: float = None,
 ):
     data = {
-        "prediction_type": prediction_type,
-        "input_features": input_features,
-        "predicted_value": predicted_value,
-        "predicted_class": predicted_class,
-        "dropout_probability": dropout_probability,
+        "student_id": student_id,
+        "semester_target": semester_target,
+        "hasil": hasil,
+        "probabilitas": None,
+        "nilai_prediksi": nilai_prediksi,
+        "batas_bawah": batas_bawah,
+        "batas_atas": batas_atas,
+        "faktor": {"items": faktor, "input_features": input_features},
+        "model_version": model_version,
     }
-
-    response = (
-        supabase
-        .table("predictions")
-        .insert(data)
-        .execute()
-    )
-
-    return response.data
+    return get_supabase().table("predictions").insert(data).execute().data
 
 def get_predictions(limit: int = 50):
     response = (
-        supabase
+        get_supabase()
         .table("predictions")
         .select("*")
         .order("created_at", desc=True)
